@@ -1,0 +1,38 @@
+{
+  "novo-nordisk": {
+    "scores": {
+      "lav-capex": 0.3,
+      "ingen-fusioner": 0.8,
+      "stabil-ledelse": 0.9,
+      "fokuseret": 0.7,
+      "hoj-udlodning": 0.3,
+      "blandt-de-bedste": 1.0,
+      "lav-konjunkturrisiko": 0.7
+    },
+    "notes": "Førende inden for GLP-1. Høj vækst men relativt lavt udbytte og høje CapEx-omkostninger."
+  },
+  "coca-cola": {
+    "scores": {
+      "lav-capex": 0.6,
+      "ingen-fusioner": 0.7,
+      "stabil-ledelse": 0.8,
+      "fokuseret": 0.9,
+      "hoj-udlodning": 0.9,
+      "blandt-de-bedste": 1.0,
+      "lav-konjunkturrisiko": 0.9
+    },
+    "notes": "Klassisk defense-aktie. Højt udbytte, globalt brand, lav konjunkturfølsomhed."
+  },
+  "dsv": {
+    "scores": {
+      "lav-capex": 0.8,
+      "ingen-fusioner": 0.5,
+      "stabil-ledelse": 0.7,
+      "fokuseret": 0.8,
+      "hoj-udlodning": 0.4,
+      "blandt-de-bedste": 0.9,
+      "lav-konjunkturrisiko": 0.4
+    },
+    "notes": "Global logistikleder men påvirkes af konjunkturer. Har lavet flere opkøb."
+  }
+}
