@@ -1,10 +1,10 @@
-/* Aktieguld Radar — genereret 02-06-2026 kl. 15:42 */
+/* Aktieguld Radar — genereret 02-06-2026 kl. 15:43 */
 window.AKTIEGULD = {
   "meta": {
     "title": "Aktieguld Centralen",
     "week": "Uge 23",
     "dateLong": "2. juni 2026",
-    "updated": "02-06-2026 kl. 15:42",
+    "updated": "02-06-2026 kl. 15:43",
     "cadence": "Kører hver søndag",
     "tagline": "Et glimt af guld i støjen — systematisk, tålmodig, kedeligt på den gode måde."
   },
@@ -133,35 +133,35 @@ window.AKTIEGULD = {
     {
       "name": "Coca-Cola",
       "ticker": "KO",
-      "price": "0.00",
-      "currency": "DKK",
-      "weekPct": 0,
-      "yearPct": 0,
+      "price": "78.36",
+      "currency": "USD",
+      "weekPct": -2.6,
+      "yearPct": 12.0,
       "metrics": {
-        "pe": "0.0",
+        "pe": "24.6",
         "peVerdict": {
           "kind": "warn",
-          "text": "Ingen data"
+          "text": "Dyr (P/E over 20 — kræver høj vækst)"
         },
-        "marketCap": "—",
-        "eps": "—",
-        "payout": "0.0%",
-        "revGrowth": "0.0%",
-        "margin": "0.0%",
-        "roe": "0.0%",
-        "debtEquity": "—",
-        "beta": "0.00",
-        "low52": "0",
-        "high52": "0",
-        "rangePct": 50
+        "marketCap": "337.1 mia.",
+        "eps": "3.18",
+        "payout": "64.8%",
+        "revGrowth": "12.1%",
+        "margin": "27.8%",
+        "roe": "43.4%",
+        "debtEquity": "124.9",
+        "beta": "0.36",
+        "low52": "65",
+        "high52": "83",
+        "rangePct": 75.0
       },
       "expected": {
-        "growth": 0,
-        "dividend": 0,
-        "total": 0,
+        "growth": 18.2,
+        "dividend": 2.7,
+        "total": 20.9,
         "note": {
           "kind": "warn",
-          "text": "Ingen data"
+          "text": "Dyr (P/E over 20 — kræver høj vækst)"
         }
       },
       "score": {
@@ -199,17 +199,17 @@ window.AKTIEGULD = {
         ]
       },
       "technical": {
-        "trend": "up",
-        "trendText": "Ikke nok data til teknisk analyse.",
-        "cross": null,
+        "trend": "down",
+        "trendText": "Kursen er i en nedadgående tendens. Aktien er faldet 0.2% den seneste måned.",
+        "cross": "Gyldent kors: Kursen ligger over både 50-dages (78) og 200-dages (72) gennemsnittet. Den langsigtede trend er opadgående.",
         "smaText": null,
-        "rsi": 50,
-        "rsiText": "RSI — ingen data.",
-        "rangeText": "—",
-        "sma50": "—",
-        "sma200": "—",
-        "support": "—",
-        "resistance": "—"
+        "rsi": 40,
+        "rsiText": "RSI er 40 — neutral. Ingen ekstreme signaler.",
+        "rangeText": "Prisen er i den øverste fjerdedel af 52-ugers intervallet. Tæt på toppen.",
+        "sma50": "78",
+        "sma200": "72",
+        "support": "68",
+        "resistance": "78"
       },
       "news": {
         "source": null,
@@ -219,35 +219,35 @@ window.AKTIEGULD = {
     {
       "name": "DSV",
       "ticker": "DSV.CO",
-      "price": "0.00",
+      "price": "1,629.00",
       "currency": "DKK",
-      "weekPct": 0,
-      "yearPct": 0,
+      "weekPct": 4.0,
+      "yearPct": 6.8,
       "metrics": {
-        "pe": "0.0",
+        "pe": "45.8",
         "peVerdict": {
           "kind": "warn",
-          "text": "Ingen data"
+          "text": "Dyr (P/E over 20 — kræver høj vækst)"
         },
-        "marketCap": "—",
-        "eps": "—",
-        "payout": "0.0%",
-        "revGrowth": "0.0%",
-        "margin": "0.0%",
-        "roe": "0.0%",
-        "debtEquity": "—",
-        "beta": "0.00",
-        "low52": "0",
-        "high52": "0",
-        "rangePct": 50
+        "marketCap": "388.6 mia.",
+        "eps": "35.58",
+        "payout": "19.7%",
+        "revGrowth": "68.9%",
+        "margin": "2.5%",
+        "roe": "6.2%",
+        "debtEquity": "77.2",
+        "beta": "0.98",
+        "low52": "1,233",
+        "high52": "1,914",
+        "rangePct": 58.0
       },
       "expected": {
-        "growth": 0,
-        "dividend": 0,
-        "total": 0,
+        "growth": 68.9,
+        "dividend": 44.0,
+        "total": 112.9,
         "note": {
           "kind": "warn",
-          "text": "Ingen data"
+          "text": "Dyr (P/E over 20 — kræver høj vækst)"
         }
       },
       "score": {
@@ -286,16 +286,16 @@ window.AKTIEGULD = {
       },
       "technical": {
         "trend": "up",
-        "trendText": "Ikke nok data til teknisk analyse.",
-        "cross": null,
+        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 3.7% den seneste måned.",
+        "cross": "Gyldent kors: Kursen ligger over både 50-dages (1587) og 200-dages (1528) gennemsnittet. Den langsigtede trend er opadgående.",
         "smaText": null,
-        "rsi": 50,
-        "rsiText": "RSI — ingen data.",
-        "rangeText": "—",
-        "sma50": "—",
-        "sma200": "—",
-        "support": "—",
-        "resistance": "—"
+        "rsi": 65,
+        "rsiText": "RSI er 65 — neutral. Ingen ekstreme signaler.",
+        "rangeText": "Prisen er midt i 52-ugers intervallet (58% fra bunden).",
+        "sma50": "1,587",
+        "sma200": "1,528",
+        "support": "1,322",
+        "resistance": "1,799"
       },
       "news": {
         "source": null,
@@ -305,35 +305,35 @@ window.AKTIEGULD = {
     {
       "name": "Jyske Bank",
       "ticker": "JYSK.CO",
-      "price": "0.00",
+      "price": "903.00",
       "currency": "DKK",
-      "weekPct": 0,
-      "yearPct": 0,
+      "weekPct": -1.5,
+      "yearPct": 47.2,
       "metrics": {
-        "pe": "0.0",
+        "pe": "10.9",
         "peVerdict": {
-          "kind": "warn",
-          "text": "Ingen data"
+          "kind": "good",
+          "text": "Fair pris (P/E under 15)"
         },
-        "marketCap": "—",
-        "eps": "—",
-        "payout": "0.0%",
-        "revGrowth": "0.0%",
-        "margin": "0.0%",
-        "roe": "0.0%",
+        "marketCap": "51.6 mia.",
+        "eps": "83.08",
+        "payout": "30.1%",
+        "revGrowth": "-8.1%",
+        "margin": "36.8%",
+        "roe": "10.3%",
         "debtEquity": "—",
-        "beta": "0.00",
-        "low52": "0",
-        "high52": "0",
-        "rangePct": 50
+        "beta": "0.35",
+        "low52": "618",
+        "high52": "981",
+        "rangePct": 79.0
       },
       "expected": {
-        "growth": 0,
-        "dividend": 0,
-        "total": 0,
+        "growth": -8.1,
+        "dividend": 2.8,
+        "total": -5.3,
         "note": {
-          "kind": "warn",
-          "text": "Ingen data"
+          "kind": "good",
+          "text": "Fair pris (P/E under 15)"
         }
       },
       "score": {
@@ -372,16 +372,16 @@ window.AKTIEGULD = {
       },
       "technical": {
         "trend": "up",
-        "trendText": "Ikke nok data til teknisk analyse.",
-        "cross": null,
+        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 2.1% den seneste måned.",
+        "cross": "Gyldent kors: Kursen ligger over både 50-dages (893) og 200-dages (812) gennemsnittet. Den langsigtede trend er opadgående.",
         "smaText": null,
-        "rsi": 50,
-        "rsiText": "RSI — ingen data.",
-        "rangeText": "—",
-        "sma50": "—",
-        "sma200": "—",
-        "support": "—",
-        "resistance": "—"
+        "rsi": 60,
+        "rsiText": "RSI er 60 — neutral. Ingen ekstreme signaler.",
+        "rangeText": "Prisen er i den øverste fjerdedel af 52-ugers intervallet. Tæt på toppen.",
+        "sma50": "893",
+        "sma200": "812",
+        "support": "631",
+        "resistance": "905"
       },
       "news": {
         "source": "Ritzau Finans",
