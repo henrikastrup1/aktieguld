@@ -1,38 +1,38 @@
 {
   "novo-nordisk": {
     "scores": {
-      "lav-capex": 0.3,
-      "ingen-fusioner": 0.8,
-      "stabil-ledelse": 0.9,
-      "fokuseret": 0.7,
-      "hoj-udlodning": 0.3,
+      "lav-capex": 0.2,
+      "ingen-fusioner": 0.3,
+      "stabil-ledelse": 0.3,
+      "fokuseret": 1.0,
+      "hoj-udlodning": 0.5,
       "blandt-de-bedste": 1.0,
-      "lav-konjunkturrisiko": 0.7
+      "lav-konjunkturrisiko": 0.8
     },
-    "notes": "Førende inden for GLP-1. Høj vækst men relativt lavt udbytte og høje CapEx-omkostninger."
+    "notes": "CEO Mike Doustdar (aug 2025-) — kun 10 mdr. CapEx 19%+ pga. kæmpe fabriksbyggeri. Købte Akero $5.2B (2025) og Catalent-produktion. #1 diabetes, #2 fedme. Defensiv sektor, men hård konkurrence fra Eli Lilly."
   },
   "coca-cola": {
     "scores": {
-      "lav-capex": 0.6,
-      "ingen-fusioner": 0.7,
+      "lav-capex": 1.0,
+      "ingen-fusioner": 0.5,
       "stabil-ledelse": 0.8,
-      "fokuseret": 0.9,
-      "hoj-udlodning": 0.9,
+      "fokuseret": 1.0,
+      "hoj-udlodning": 0.6,
       "blandt-de-bedste": 1.0,
-      "lav-konjunkturrisiko": 0.9
+      "lav-konjunkturrisiko": 1.0
     },
-    "notes": "Klassisk defense-aktie. Højt udbytte, globalt brand, lav konjunkturfølsomhed."
+    "notes": "James Quincey CEO 2017-2026 (~9 år), Henrique Braun overtager i 2026. BodyArmor $5.6B (2021). CapEx ~4.5% (asset-light). Dividend King: 63 år med stigning. Payout 78%. #1 globale drikkevarebrand."
   },
   "dsv": {
     "scores": {
-      "lav-capex": 0.8,
-      "ingen-fusioner": 0.5,
-      "stabil-ledelse": 0.7,
-      "fokuseret": 0.8,
-      "hoj-udlodning": 0.4,
-      "blandt-de-bedste": 0.9,
-      "lav-konjunkturrisiko": 0.4
+      "lav-capex": 1.0,
+      "ingen-fusioner": 0.2,
+      "stabil-ledelse": 0.4,
+      "fokuseret": 1.0,
+      "hoj-udlodning": 0.5,
+      "blandt-de-bedste": 1.0,
+      "lav-konjunkturrisiko": 0.2
     },
-    "notes": "Global logistikleder men påvirkes af konjunkturer. Har lavet flere opkøb."
+    "notes": "CEO Jens Lund (feb 2024-) — 2.4 år. Schenker €14.3B (2024), GIL $4.1B (2021). CapEx kun ~1.5% (asset-light). #1 global freight forwarder. Meget cyklisk — omsætning faldt 38% i 2023."
   }
 }
