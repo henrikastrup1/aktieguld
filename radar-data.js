@@ -1,10 +1,10 @@
-/* Aktieguld Radar — genereret 02-06-2026 kl. 15:48 */
+/* Aktieguld Radar — genereret 02-06-2026 kl. 15:53 */
 window.AKTIEGULD = {
   "meta": {
     "title": "Aktieguld Centralen",
     "week": "Uge 23",
     "dateLong": "2. juni 2026",
-    "updated": "02-06-2026 kl. 15:48",
+    "updated": "02-06-2026 kl. 15:53",
     "cadence": "Kører hver søndag",
     "tagline": "Et glimt af guld i støjen — systematisk, tålmodig, kedeligt på den gode måde."
   },
@@ -113,8 +113,58 @@ window.AKTIEGULD = {
         "resistance": "472"
       },
       "news": {
-        "source": "Ritzau (2), Børsen (1)",
+        "source": "Yahoo Finance (10), Ritzau (2), Børsen (1)",
         "items": [
+          {
+            "time": "02-06",
+            "text": "Viking Therapeutics' Q3 Catalyst That Could Turn Eli Lilly's and Novo Nordisk's Daily Weight Loss Pill Strategy Upside Down",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/viking-therapeutics-q3-catalyst-could-150800770.html"
+          },
+          {
+            "time": "02-06",
+            "text": "Is Novo Nordisk A/S (NVO) Expanding Its Lead in Diabetes and Weight Loss Ahead of ADA Conference?",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/novo-nordisk-nvo-expanding-lead-141027884.html"
+          },
+          {
+            "time": "02-06",
+            "text": "Pfizer's Obesity and Oncology Pipeline Sets Up a Catalyst-Rich 2026",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/pfizers-obesity-oncology-pipeline-sets-130800477.html"
+          },
+          {
+            "time": "01-06",
+            "text": "Is Eli Lilly Starting an Nvidia-Style Run?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/eli-lilly-starting-nvidia-style-102500703.html"
+          },
+          {
+            "time": "31-05",
+            "text": "5 Best Growth Stocks for the Next 10 Years",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/5-best-growth-stocks-next-114500183.html"
+          },
+          {
+            "time": "30-05",
+            "text": "Lilly's New Drug Just Delivered the Largest Weight Loss Ever Seen in a Clinical Trial -- Here's What It Means for Investors",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/lillys-drug-just-delivered-largest-123500453.html"
+          },
+          {
+            "time": "30-05",
+            "text": "CVS Decision Tests Novo Nordisk Wegovy Edge And Valuation Story",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/cvs-decision-tests-novo-nordisk-110621754.html"
+          },
+          {
+            "time": "30-05",
+            "text": "Stock Split Watch: Is Eli Lilly Next?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/stock-split-watch-eli-lilly-081000229.html"
+          },
+          {
+            "time": "29-05",
+            "text": "Eli Lilly (LLY): Top Healthcare Stock Pick of Claude AI",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/eli-lilly-lly-top-healthcare-200844274.html"
+          },
+          {
+            "time": "29-05",
+            "text": "LLY Stock Gains 4% to All-Time High: Is Obesity Access the Catalyst?",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/lly-stock-gains-4-time-144900164.html"
+          },
           {
             "time": "08:56",
             "text": "Novonesis får udvidet godkendelse for foderenzym i EU"
@@ -347,17 +397,17 @@ window.AKTIEGULD = {
     {
       "name": "Coca-Cola",
       "ticker": "KO",
-      "price": "78.42",
+      "price": "78.31",
       "currency": "USD",
-      "weekPct": -2.5,
-      "yearPct": 12.1,
+      "weekPct": -2.7,
+      "yearPct": 11.9,
       "metrics": {
-        "pe": "24.7",
+        "pe": "24.6",
         "peVerdict": {
           "kind": "warn",
           "text": "Dyr (P/E over 20 — kræver høj vækst)"
         },
-        "marketCap": "337.4 mia.",
+        "marketCap": "336.9 mia.",
         "eps": "3.18",
         "payout": "64.8%",
         "revGrowth": "12.1%",
@@ -367,7 +417,7 @@ window.AKTIEGULD = {
         "beta": "0.36",
         "low52": "65",
         "high52": "83",
-        "rangePct": 76.0
+        "rangePct": 75.0
       },
       "expected": {
         "growth": 18.2,
@@ -414,7 +464,7 @@ window.AKTIEGULD = {
       },
       "technical": {
         "trend": "down",
-        "trendText": "Kursen er i en nedadgående tendens. Aktien er faldet 0.1% den seneste måned.",
+        "trendText": "Kursen er i en nedadgående tendens. Aktien er faldet 0.2% den seneste måned.",
         "cross": "Gyldent kors: Kursen ligger over både 50-dages (78) og 200-dages (72) gennemsnittet. Den langsigtede trend er opadgående.",
         "smaText": null,
         "rsi": 40,
@@ -426,8 +476,59 @@ window.AKTIEGULD = {
         "resistance": "78"
       },
       "news": {
-        "source": null,
-        "items": []
+        "source": "Yahoo Finance (10)",
+        "items": [
+          {
+            "time": "02-06",
+            "text": "The Coca-Cola Company readies listing of India bottler",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-company-readies-listing-135139209.html"
+          },
+          {
+            "time": "02-06",
+            "text": "Inside Coca-Cola’s use of AI to sharpen marketing spend",
+            "url": "https://finance.yahoo.com/sectors/technology/articles/inside-coca-cola-ai-sharpen-070000984.html"
+          },
+          {
+            "time": "02-06",
+            "text": "Coca-Cola India Bottler Listing Plan And What It Means For KO Investors",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-india-bottler-listing-021121512.html"
+          },
+          {
+            "time": "01-06",
+            "text": "Can Brand Restaging Meaningfully Lift PepsiCo's Organic Sales Outlook?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/brand-restaging-meaningfully-lift-pepsicos-170200953.html"
+          },
+          {
+            "time": "01-06",
+            "text": "Coca Cola Stock Will Hit a New All-Time High On This Date",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-stock-hit-time-153800175.html"
+          },
+          {
+            "time": "01-06",
+            "text": "Walmart’s Pullback Has Created a Compelling Technical Setup",
+            "url": "https://www.barrons.com/articles/walmart-stock-earnings-pullback-opportunity-60af1f24?siteid=yhoof2&yptr=yahoo"
+          },
+          {
+            "time": "01-06",
+            "text": "Is Coca-Cola (KO) the Safest Dividend Stock To Buy?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-safest-dividend-134336594.html"
+          },
+          {
+            "time": "01-06",
+            "text": "Is Coca-Cola (KO) a Buy as Wall Street Analysts Look Optimistic?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-buy-wall-133003766.html"
+          },
+          {
+            "time": "01-06",
+            "text": "Coca-Cola's Dividend Strength: Still a Reliable Income Play?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-colas-dividend-strength-still-123000793.html"
+          },
+          {
+            "time": "01-06",
+            "text": "No Rate Cuts Until 2027? Grab These High-Yielding Safe Dividend Kings Now",
+            "url": "https://finance.yahoo.com/economy/policy/articles/no-rate-cuts-until-2027-122004167.html"
+          }
+        ]
       },
       "history": [
         {
@@ -640,7 +741,7 @@ window.AKTIEGULD = {
         },
         {
           "d": "2026-06-07",
-          "p": 78.42
+          "p": 78.31
         }
       ]
     },
@@ -726,8 +827,59 @@ window.AKTIEGULD = {
         "resistance": "1,799"
       },
       "news": {
-        "source": null,
-        "items": []
+        "source": "Yahoo Finance (10)",
+        "items": [
+          {
+            "time": "30-04",
+            "text": "DSV AS (DSDVF) Q1 2026 Earnings Call Highlights: Robust Revenue Growth Amid Schenker Integration",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/dsv-dsdvf-q1-2026-earnings-070435952.html"
+          },
+          {
+            "time": "29-04",
+            "text": "How The DSV (CPSE:DSV) Story Is Shifting As Analyst Views Move In Opposite Directions",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/dsv-cpse-dsv-story-shifting-100903511.html"
+          },
+          {
+            "time": "29-04",
+            "text": "A Look At DSV (CPSE:DSV) Valuation As Shares Show Strong Recent Momentum",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/look-dsv-cpse-dsv-valuation-050320157.html"
+          },
+          {
+            "time": "28-04",
+            "text": "What To Expect From DSV AS (DSDVY) Q1 2026 Earnings",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/expect-dsv-dsdvy-q1-2026-131609842.html"
+          },
+          {
+            "time": "25-03",
+            "text": "Iran war and AI advances are creating winners and losers among transport stocks",
+            "url": "https://finance.yahoo.com/news/iran-war-and-ai-advances-are-creating-winners-and-losers-among-transport-stocks-173815429.html"
+          },
+          {
+            "time": "14-02",
+            "text": "Is There Now An Opportunity In DSV (CPSE:DSV) After Recent Share Price Weakness",
+            "url": "https://finance.yahoo.com/news/now-opportunity-dsv-cpse-dsv-091307773.html"
+          },
+          {
+            "time": "04-02",
+            "text": "DSV AS (DSDVF) Q4 2025 Earnings Call Highlights: Strong Cash Flow and Strategic Integrations ...",
+            "url": "https://finance.yahoo.com/news/dsv-dsdvf-q4-2025-earnings-170109564.html"
+          },
+          {
+            "time": "03-02",
+            "text": "DSV AS (DSDVY) Q4 2025 Earnings Report Preview: What To Look For",
+            "url": "https://finance.yahoo.com/news/dsv-dsdvy-q4-2025-earnings-121814554.html"
+          },
+          {
+            "time": "26-01",
+            "text": "3 European Stocks Estimated To Be Undervalued By At Least 27.4%",
+            "url": "https://finance.yahoo.com/news/3-european-stocks-estimated-undervalued-053755174.html"
+          },
+          {
+            "time": "14-01",
+            "text": "This is the \"only stock to own\" in European logistics, Bernstein says",
+            "url": "https://finance.yahoo.com/news/only-stock-own-european-logistics-104221926.html"
+          }
+        ]
       },
       "history": [
         {
@@ -1026,8 +1178,58 @@ window.AKTIEGULD = {
         "resistance": "905"
       },
       "news": {
-        "source": "Ritzau (2)",
+        "source": "Yahoo Finance (10), Ritzau (2)",
         "items": [
+          {
+            "time": "11-05",
+            "text": "Jyske Bank (CPSE:JYSK) Valuation Check After Strong 1 Year Return And Recent Pullback",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/jyske-bank-cpse-jysk-valuation-091241566.html"
+          },
+          {
+            "time": "07-05",
+            "text": "Jyske Bank AS (JYSKY) Q1 2026 Earnings Call Highlights: Strong EPS and Robust Capital Position ...",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/jyske-bank-jysky-q1-2026-230019945.html"
+          },
+          {
+            "time": "21-04",
+            "text": "Jyske Bank Capital Changes Shape Future Shareholder Returns And Earnings Outlook",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/jyske-bank-capital-changes-shape-200355041.html"
+          },
+          {
+            "time": "07-04",
+            "text": "A Look At Jyske Bank (CPSE:JYSK) Valuation After A Strong Year Of Shareholder Returns",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/look-jyske-bank-cpse-jysk-051313155.html"
+          },
+          {
+            "time": "02-03",
+            "text": "Assessing Jyske Bank (CPSE:JYSK) Valuation After A Strong 1 Year Return",
+            "url": "https://finance.yahoo.com/news/assessing-jyske-bank-cpse-jysk-160627002.html"
+          },
+          {
+            "time": "13-02",
+            "text": "Jyske Bank AS (FRA:JYS1) Q4 2025 Earnings Call Highlights: Strong EPS Growth and Record Capital ...",
+            "url": "https://finance.yahoo.com/news/jyske-bank-fra-jys1-q4-010043054.html"
+          },
+          {
+            "time": "09-02",
+            "text": "Assessing Jyske Bank’s (CPSE:JYSK) Valuation After A Powerful Share Price Rally",
+            "url": "https://finance.yahoo.com/news/assessing-jyske-bank-cpse-jysk-081323824.html"
+          },
+          {
+            "time": "20-01",
+            "text": "How Upgraded 2025 Profit Guidance And Buybacks At Jyske Bank (CPSE:JYSK) Have Changed Its Investment Story",
+            "url": "https://finance.yahoo.com/news/upgraded-2025-profit-guidance-buybacks-210931997.html"
+          },
+          {
+            "time": "13-01",
+            "text": "A Look At Jyske Bank (CPSE:JYSK) Valuation As A DKK 2.25b Share Buyback Begins",
+            "url": "https://finance.yahoo.com/news/look-jyske-bank-cpse-jysk-101219601.html"
+          },
+          {
+            "time": "17-12",
+            "text": "Does Jyske Bank's Ongoing DKK 2.25bn Buyback Shift Its Capital Story (CPSE:JYSK)?",
+            "url": "https://finance.yahoo.com/news/does-jyske-banks-ongoing-dkk-160841356.html"
+          },
           {
             "time": "12:13",
             "text": "Genmab/Jyske: Konkurrentdata skaber tvivl om milliardopkøb - aktien dykker"
