@@ -36,7 +36,15 @@
     "notes": "CEO Jens Lund (feb 2024-) — 2.4 år. Schenker €14.3B (2024), GIL $4.1B (2021). CapEx kun ~1.5% (asset-light). #1 global freight forwarder. Meget cyklisk — omsætning faldt 38% i 2023."
   },
   "jyske-bank": {
-    "scores": {},
-    "notes": ""
+    "scores": {
+      "lav-capex": 1.0,
+      "ingen-fusioner": 0.3,
+      "stabil-ledelse": 0.4,
+      "fokuseret": 1.0,
+      "hoj-udlodning": 0.4,
+      "blandt-de-bedste": 0.6,
+      "lav-konjunkturrisiko": 0.5
+    },
+    "notes": "CEO Lars Stensgaard Mørch (nov. 2023-) — ~2,5 år. Forrige CEO Anders Dam 26+ år. Købte Handelsbanken Danmark (2022). CET1 16,1%. #3 i Danmark. Moderat cyklisk bank."
   }
 }
