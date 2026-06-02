@@ -1,676 +1,83 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aktieguld Radar — Uge 23</title>
+<title>Aktieguld Radar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--card:#161616;
-    --ink:#e8e0d8;--ink2:#8a8278;--ink3:#5a5248;
-    --gold:#d4a853;--gold-glow:rgba(212,168,83,.15);
-    --green:#4caf50;--red:#f44336;--orange:#ff9800;
-    --border:#222;--radius:12px;--radius-sm:8px;
-    --font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
-  }
-  html{font-size:15px}
-  body{font-family:var(--font);background:var(--bg);color:var(--ink);min-height:100vh}
-  .hero{position:relative;padding:60px 24px 40px;text-align:center;
-    background:linear-gradient(180deg,#0d0d0d 0%,var(--bg) 100%);
-    border-bottom:1px solid var(--border);
-  }
-  .hero h1{font-size:2rem;font-weight:700;letter-spacing:-.5px}
-  .hero h1 span{color:var(--gold)}
-  .hero .sub{color:var(--ink2);margin-top:8px;font-size:.9rem}
-  .hero .date{color:var(--ink3);font-size:.8rem;margin-top:4px}
-  .container{max-width:1100px;margin:0 auto;padding:24px}
-  .stock-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:32px;position:relative}
-  .stock-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
-    background:linear-gradient(90deg,var(--gold),transparent);border-radius:var(--radius) var(--radius) 0 0}
-  .stock-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:24px;flex-wrap:wrap;gap:12px}
-  .stock-header h2{font-size:1.4rem;font-weight:600}
-  .ticker{color:var(--ink3);font-family:var(--mono);font-size:.8rem}
-  .price-box{text-align:right}
-  .price{font-size:1.6rem;font-weight:700;font-family:var(--mono);color:var(--gold)}
-  .changes{display:flex;gap:16px;justify-content:flex-end;margin-top:4px;font-size:.85rem}
-  .stock-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:768px){.stock-grid{grid-template-columns:1fr}}
-  .section{background:var(--bg2);border-radius:var(--radius-sm);padding:16px;position:relative}
-  .section.wide{grid-column:1/-1}
-  .section h3{font-size:.85rem;font-weight:600;color:var(--gold);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
-  table.metrics{width:100%;font-size:.82rem}
-  table.metrics td{padding:4px 0;border-bottom:1px solid var(--border-light, #1a1a1a)}
-  table.metrics td:first-child{color:var(--ink2);width:55%}
-  table.metrics td:last-child{text-align:right;font-family:var(--mono)}
-  .return-box{margin-bottom:12px}
-  .return-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border-light, #1a1a1a);font-size:.85rem}
-  .return-row.total{border-top:2px solid var(--gold);margin-top:4px;padding-top:8px;color:var(--gold)}
-  .val{font-family:var(--mono)}
-  .pe-note{font-size:.78rem;color:var(--ink2);margin-top:8px}
-  .score-summary{display:flex;align-items:center;gap:16px;margin-bottom:16px}
-  .score-circle{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;font-family:var(--mono);flex-shrink:0}
-  .score-circle span{background:var(--bg2);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-  .score-label-big{font-weight:600;font-size:.95rem}
-  .score-max{font-size:.78rem;color:var(--ink2)}
-  .score-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:.78rem}
-  .score-label{flex:0 0 40%;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:help}
-  .score-bar-bg{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
-  .score-bar-fill{height:100%;border-radius:3px;transition:width .5s}
-  .score-val{flex:0 0 30px;text-align:right;font-family:var(--mono);font-size:.75rem}
-  .edit-hint{font-size:.72rem;color:var(--ink3);margin-top:12px;text-align:center}
-  .tech-box{font-size:.82rem;line-height:1.6}
-  .tech-box strong{color:var(--gold)}
-  .tech-details{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:.75rem;color:var(--ink3)}
-  .tech-details span{background:var(--bg3);padding:2px 8px;border-radius:4px}
-  .news-list{list-style:none}
-  .news-list li{padding:8px 0;border-bottom:1px solid var(--border-light, #1a1a1a);font-size:.82rem}
-  .news-list li:last-child{border-bottom:none}
-  .news-list a{color:var(--ink);text-decoration:none}
-  .news-list a:hover{color:var(--gold)}
-  .news-date{display:block;font-size:.72rem;color:var(--ink3);margin-top:2px}
-  .no-news{color:var(--ink3);font-style:italic}
-  .news-divider{padding:8px 0 4px;border-bottom:none !important}
-  .news-divider span{color:var(--gold);font-weight:600;font-size:.75rem}
-  .ritzau-item{color:var(--ink2);font-size:.78rem;padding:3px 0 3px 12px;border-bottom-color:var(--bg3) !important}
-  .ritzau-time{color:var(--ink3);font-family:var(--mono);margin-right:6px}
-  .add-stock{text-align:center;padding:24px;background:var(--bg2);border-radius:var(--radius);border:1px dashed var(--border);margin-top:16px}
-  .add-stock a{color:var(--gold);text-decoration:none}
-  .add-stock a:hover{text-decoration:underline}
-  .footer{text-align:center;padding:32px 24px;color:var(--ink3);font-size:.78rem}
-  .footer a{color:var(--ink2)}
-</style>
+<link rel="stylesheet" href="radar.css">
 </head>
 <body>
+
 <div class="hero">
-  <h1>🥇 <span>Aktieguld</span> Radar</h1>
-  <p class="sub">Systematisk investeringsmodel — 4 faser • Ugentlig opdatering</p>
-  <p class="date">Uge 23 • 02. June 2026</p>
-</div>
-<div class="container">
-  
-        <div class="stock-card" id="novo-nordisk">
-          <div class="stock-header">
-            <div>
-              <h2>Novo Nordisk</h2>
-              <span class="ticker">NOVO-B.CO</span>
-            </div>
-            <div class="price-box">
-              <div class="price">277.65 DKK</div>
-              <div class="changes">
-                <span class="change" style="color:#f44336">📉 Uge: -3.4%</span>
-                <span class="change" style="color:#f44336">📉 År: -38.8%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="stock-grid">
-            <div class="section">
-              <h3>📊 Nøgletal</h3>
-              <table class="metrics">
-                <tr><td>P/E</td><td>10.1</td></tr>
-                <tr><td>P/E vurdering</td><td>✅ Fair pris (P/E under 15)</td></tr>
-                <tr><td>Market Cap</td><td>1.2B</td></tr>
-                <tr><td>EPS</td><td>27.42</td></tr>
-                <tr><td>Payout Ratio</td><td>42.7%</td></tr>
-                <tr><td>Revenue Growth</td><td>24.0%</td></tr>
-                <tr><td>Overskudsgrad</td><td>37.2%</td></tr>
-                <tr><td>Egenkapitalforrentning (ROE)</td><td>71.4%</td></tr>
-                <tr><td>Gæld/egenkapital</td><td>72.1</td></tr>
-                <tr><td>Beta</td><td>0.35</td></tr>
-                <tr><td>52-ugers høj/lav</td><td>533 / 224</td></tr>
-                <tr><td>Posisition i interval</td><td>17% fra bunden</td></tr>
-              </table>
-            </div>
-
-            <div class="section">
-              <h3>🎯 Forventet afkast (Fase 2)</h3>
-              <div class="return-box">
-                <div class="return-row">
-                  <span>Forventet årlig vækst</span>
-                  <span class="val">67.1%</span>
-                </div>
-                <div class="return-row">
-                  <span>Udbytte</span>
-                  <span class="val">5.6%</span>
-                </div>
-                <div class="return-row total">
-                  <span><strong>Forventet årligt afkast</strong></span>
-                  <span class="val"><strong>72.7%</strong></span>
-                </div>
-              </div>
-              <p class="pe-note">✅ Fair pris (P/E under 15)</p>
-            </div>
-
-            <div class="section">
-              <h3>🏆 Kvalitativ score (Fase 3)</h3>
-              <div class="score-summary">
-                <div class="score-circle" style="background:conic-gradient(#ff9800 0% 58.57142857142856%, #333 58.57142857142856% 100%)">
-                  <span>4.1</span>
-                </div>
-                <div class="score-text">
-                  <div class="score-label-big">⚠️ Afvent</div>
-                  <div class="score-max">ud af 7 point</div>
-                </div>
-              </div>
-              
-            <div class="score-row">
-              <div class="score-label"><span title="Bruger få penge på maskiner/bygninger">Lavt investeringsniveau (CapEx)</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:20.0%;background:#f44336"></div>
-              </div>
-              <div class="score-val">0.2</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Undgår risikable milliardopkøb">Ingen store fusioner</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:30.0%;background:#f44336"></div>
-              </div>
-              <div class="score-val">0.3</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="CEO siddet i ≥3 år">Stabil ledelse</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:30.0%;background:#f44336"></div>
-              </div>
-              <div class="score-val">0.3</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Holder sig til kerneforretningen">Fokuseret virksomhed</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Udlodder ≥70% af overskud">Høj udlodning</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:50.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.5</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Top 2-3 i sin branche">Blandt de bedste</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Modstandsdygtig over for kriser">Lav konjunkturrisiko</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:80.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">0.8</div>
-            </div>
-              <p class="edit-hint">✏️ Rediger scores i <code>scores.json</code> i repoet</p>
-            </div>
-
-            <div class="section">
-              <h3>📈 Teknisk analyse</h3>
-              <div class="tech-box">
-                📉 **Kursen er i en nedadgående tendens.** Aktien er faldet 0.1% den seneste måned.
-📊 Kursen (278) ligger over 50-dages SMA (262). Positivt kortsigtet signal.
-🟡 **RSI er 40 — neutral.** Hverken overkøbt eller oversolgt. Ingen ekstreme signaler lige nu.
-📉 Prisen er i den nederste fjerdedel af 52-ugers intervallet. Tæt på bunden.
-📌 **Støtte:** ca. 235 | **Modstand:** ca. 472
-              </div>
-              <div class="tech-details">
-                <span>50-dages SMA: 262.0</span>
-                <span>200-dages SMA: 306.0</span>
-                <span>RSI (14): 40.0</span>
-                <span>Støtte: 235.0</span>
-                <span>Modstand: 472.0</span>
-              </div>
-            </div>
-
-            <div class="section wide">
-              <h3>📰 Ugentlige nyheder</h3>
-              <ul class="news-list">
-                <li class="news-divider"><span>🇩🇰 Danske nyheder</span></li><li class="ritzau-item"><span class="ritzau-time">08:56</span> Novonesis får udvidet godkendelse for foderenzym i EU</li><li class="ritzau-item"><span class="ritzau-time">08:54</span> Novonesis kan få medvind fra Mellemøsten mener Citi - NY</li><li class="ritzau-item"><span class="ritzau-time">📰</span> <a href="https://borsen.dk/nyheder/virksomheder/novos-vaegttabsmidler-topper-liste-over-bivirkninger" target="_blank" style="color:var(--ink2);text-decoration:none">Novos vægttabsmidler topper liste over bivirkninger</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="stock-card" id="coca-cola">
-          <div class="stock-header">
-            <div>
-              <h2>Coca-Cola</h2>
-              <span class="ticker">KO</span>
-            </div>
-            <div class="price-box">
-              <div class="price">78.36 USD</div>
-              <div class="changes">
-                <span class="change" style="color:#f44336">📉 Uge: -2.6%</span>
-                <span class="change" style="color:#4caf50">📈 År: +12.0%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="stock-grid">
-            <div class="section">
-              <h3>📊 Nøgletal</h3>
-              <table class="metrics">
-                <tr><td>P/E</td><td>24.6</td></tr>
-                <tr><td>P/E vurdering</td><td>⚠️ Dyr (P/E over 20 — kræver høj vækst)</td></tr>
-                <tr><td>Market Cap</td><td>337.1 mia.</td></tr>
-                <tr><td>EPS</td><td>3.18</td></tr>
-                <tr><td>Payout Ratio</td><td>64.8%</td></tr>
-                <tr><td>Revenue Growth</td><td>12.1%</td></tr>
-                <tr><td>Overskudsgrad</td><td>27.8%</td></tr>
-                <tr><td>Egenkapitalforrentning (ROE)</td><td>43.4%</td></tr>
-                <tr><td>Gæld/egenkapital</td><td>124.9</td></tr>
-                <tr><td>Beta</td><td>0.36</td></tr>
-                <tr><td>52-ugers høj/lav</td><td>83 / 65</td></tr>
-                <tr><td>Posisition i interval</td><td>75% fra bunden</td></tr>
-              </table>
-            </div>
-
-            <div class="section">
-              <h3>🎯 Forventet afkast (Fase 2)</h3>
-              <div class="return-box">
-                <div class="return-row">
-                  <span>Forventet årlig vækst</span>
-                  <span class="val">18.2%</span>
-                </div>
-                <div class="return-row">
-                  <span>Udbytte</span>
-                  <span class="val">2.7%</span>
-                </div>
-                <div class="return-row total">
-                  <span><strong>Forventet årligt afkast</strong></span>
-                  <span class="val"><strong>20.9%</strong></span>
-                </div>
-              </div>
-              <p class="pe-note">⚠️ Dyr (P/E over 20 — kræver høj vækst)</p>
-            </div>
-
-            <div class="section">
-              <h3>🏆 Kvalitativ score (Fase 3)</h3>
-              <div class="score-summary">
-                <div class="score-circle" style="background:conic-gradient(#4caf50 0% 84.28571428571429%, #333 84.28571428571429% 100%)">
-                  <span>5.9</span>
-                </div>
-                <div class="score-text">
-                  <div class="score-label-big">✅ Købsværdig</div>
-                  <div class="score-max">ud af 7 point</div>
-                </div>
-              </div>
-              
-            <div class="score-row">
-              <div class="score-label"><span title="Bruger få penge på maskiner/bygninger">Lavt investeringsniveau (CapEx)</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Undgår risikable milliardopkøb">Ingen store fusioner</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:50.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.5</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="CEO siddet i ≥3 år">Stabil ledelse</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:80.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">0.8</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Holder sig til kerneforretningen">Fokuseret virksomhed</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Udlodder ≥70% af overskud">Høj udlodning</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:60.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.6</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Top 2-3 i sin branche">Blandt de bedste</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Modstandsdygtig over for kriser">Lav konjunkturrisiko</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-              <p class="edit-hint">✏️ Rediger scores i <code>scores.json</code> i repoet</p>
-            </div>
-
-            <div class="section">
-              <h3>📈 Teknisk analyse</h3>
-              <div class="tech-box">
-                📉 **Kursen er i en nedadgående tendens.** Aktien er faldet 0.2% den seneste måned.
-✅ **Gyllent kors:** Kursen ligger over både 50-dages (78) og 200-dages (72) gennemsnittet. Det er et positivt signal — den langsigtede trend er opadgående.
-🟡 **RSI er 40 — neutral.** Hverken overkøbt eller oversolgt. Ingen ekstreme signaler lige nu.
-📈 Prisen er i den øverste fjerdedel af 52-ugers intervallet. Tæt på toppen.
-📌 **Støtte:** ca. 68 | **Modstand:** ca. 78
-              </div>
-              <div class="tech-details">
-                <span>50-dages SMA: 78.0</span>
-                <span>200-dages SMA: 72.0</span>
-                <span>RSI (14): 40.0</span>
-                <span>Støtte: 68.0</span>
-                <span>Modstand: 78.0</span>
-              </div>
-            </div>
-
-            <div class="section wide">
-              <h3>📰 Ugentlige nyheder</h3>
-              <ul class="news-list">
-                <li class="no-news">Ingen nyheder denne uge.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="stock-card" id="dsv">
-          <div class="stock-header">
-            <div>
-              <h2>DSV</h2>
-              <span class="ticker">DSV.CO</span>
-            </div>
-            <div class="price-box">
-              <div class="price">1,629.00 DKK</div>
-              <div class="changes">
-                <span class="change" style="color:#4caf50">📈 Uge: +4.0%</span>
-                <span class="change" style="color:#4caf50">📈 År: +6.8%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="stock-grid">
-            <div class="section">
-              <h3>📊 Nøgletal</h3>
-              <table class="metrics">
-                <tr><td>P/E</td><td>45.8</td></tr>
-                <tr><td>P/E vurdering</td><td>⚠️ Dyr (P/E over 20 — kræver høj vækst)</td></tr>
-                <tr><td>Market Cap</td><td>388.6 mia.</td></tr>
-                <tr><td>EPS</td><td>35.58</td></tr>
-                <tr><td>Payout Ratio</td><td>19.7%</td></tr>
-                <tr><td>Revenue Growth</td><td>68.9%</td></tr>
-                <tr><td>Overskudsgrad</td><td>2.5%</td></tr>
-                <tr><td>Egenkapitalforrentning (ROE)</td><td>6.2%</td></tr>
-                <tr><td>Gæld/egenkapital</td><td>77.2</td></tr>
-                <tr><td>Beta</td><td>0.98</td></tr>
-                <tr><td>52-ugers høj/lav</td><td>1,914 / 1,233</td></tr>
-                <tr><td>Posisition i interval</td><td>58% fra bunden</td></tr>
-              </table>
-            </div>
-
-            <div class="section">
-              <h3>🎯 Forventet afkast (Fase 2)</h3>
-              <div class="return-box">
-                <div class="return-row">
-                  <span>Forventet årlig vækst</span>
-                  <span class="val">68.9%</span>
-                </div>
-                <div class="return-row">
-                  <span>Udbytte</span>
-                  <span class="val">44.0%</span>
-                </div>
-                <div class="return-row total">
-                  <span><strong>Forventet årligt afkast</strong></span>
-                  <span class="val"><strong>112.9%</strong></span>
-                </div>
-              </div>
-              <p class="pe-note">⚠️ Dyr (P/E over 20 — kræver høj vækst)</p>
-            </div>
-
-            <div class="section">
-              <h3>🏆 Kvalitativ score (Fase 3)</h3>
-              <div class="score-summary">
-                <div class="score-circle" style="background:conic-gradient(#ff9800 0% 61.42857142857142%, #333 61.42857142857142% 100%)">
-                  <span>4.3</span>
-                </div>
-                <div class="score-text">
-                  <div class="score-label-big">⚠️ Afvent</div>
-                  <div class="score-max">ud af 7 point</div>
-                </div>
-              </div>
-              
-            <div class="score-row">
-              <div class="score-label"><span title="Bruger få penge på maskiner/bygninger">Lavt investeringsniveau (CapEx)</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Undgår risikable milliardopkøb">Ingen store fusioner</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:20.0%;background:#f44336"></div>
-              </div>
-              <div class="score-val">0.2</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="CEO siddet i ≥3 år">Stabil ledelse</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:40.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.4</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Holder sig til kerneforretningen">Fokuseret virksomhed</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Udlodder ≥70% af overskud">Høj udlodning</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:50.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.5</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Top 2-3 i sin branche">Blandt de bedste</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Modstandsdygtig over for kriser">Lav konjunkturrisiko</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:20.0%;background:#f44336"></div>
-              </div>
-              <div class="score-val">0.2</div>
-            </div>
-              <p class="edit-hint">✏️ Rediger scores i <code>scores.json</code> i repoet</p>
-            </div>
-
-            <div class="section">
-              <h3>📈 Teknisk analyse</h3>
-              <div class="tech-box">
-                📈 **Kursen er i en opadgående tendens.** Aktien er steget 3.7% den seneste måned.
-✅ **Gyllent kors:** Kursen ligger over både 50-dages (1587) og 200-dages (1528) gennemsnittet. Det er et positivt signal — den langsigtede trend er opadgående.
-🟡 **RSI er 65 — neutral.** Hverken overkøbt eller oversolgt. Ingen ekstreme signaler lige nu.
-📊 Prisen er midt i 52-ugers intervallet (58% fra bunden).
-📌 **Støtte:** ca. 1322 | **Modstand:** ca. 1799
-              </div>
-              <div class="tech-details">
-                <span>50-dages SMA: 1587.0</span>
-                <span>200-dages SMA: 1528.0</span>
-                <span>RSI (14): 65.0</span>
-                <span>Støtte: 1322.0</span>
-                <span>Modstand: 1799.0</span>
-              </div>
-            </div>
-
-            <div class="section wide">
-              <h3>📰 Ugentlige nyheder</h3>
-              <ul class="news-list">
-                <li class="no-news">Ingen nyheder denne uge.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="stock-card" id="jyske-bank">
-          <div class="stock-header">
-            <div>
-              <h2>Jyske Bank</h2>
-              <span class="ticker">JYSK.CO</span>
-            </div>
-            <div class="price-box">
-              <div class="price">903.00 DKK</div>
-              <div class="changes">
-                <span class="change" style="color:#f44336">📉 Uge: -1.5%</span>
-                <span class="change" style="color:#4caf50">📈 År: +47.2%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="stock-grid">
-            <div class="section">
-              <h3>📊 Nøgletal</h3>
-              <table class="metrics">
-                <tr><td>P/E</td><td>10.9</td></tr>
-                <tr><td>P/E vurdering</td><td>✅ Fair pris (P/E under 15)</td></tr>
-                <tr><td>Market Cap</td><td>51.6 mia.</td></tr>
-                <tr><td>EPS</td><td>83.08</td></tr>
-                <tr><td>Payout Ratio</td><td>30.1%</td></tr>
-                <tr><td>Revenue Growth</td><td>-8.1%</td></tr>
-                <tr><td>Overskudsgrad</td><td>36.8%</td></tr>
-                <tr><td>Egenkapitalforrentning (ROE)</td><td>10.3%</td></tr>
-                <tr><td>Gæld/egenkapital</td><td>—</td></tr>
-                <tr><td>Beta</td><td>0.35</td></tr>
-                <tr><td>52-ugers høj/lav</td><td>981 / 618</td></tr>
-                <tr><td>Posisition i interval</td><td>79% fra bunden</td></tr>
-              </table>
-            </div>
-
-            <div class="section">
-              <h3>🎯 Forventet afkast (Fase 2)</h3>
-              <div class="return-box">
-                <div class="return-row">
-                  <span>Forventet årlig vækst</span>
-                  <span class="val">-8.1%</span>
-                </div>
-                <div class="return-row">
-                  <span>Udbytte</span>
-                  <span class="val">2.8%</span>
-                </div>
-                <div class="return-row total">
-                  <span><strong>Forventet årligt afkast</strong></span>
-                  <span class="val"><strong>-5.3%</strong></span>
-                </div>
-              </div>
-              <p class="pe-note">✅ Fair pris (P/E under 15)</p>
-            </div>
-
-            <div class="section">
-              <h3>🏆 Kvalitativ score (Fase 3)</h3>
-              <div class="score-summary">
-                <div class="score-circle" style="background:conic-gradient(#ff9800 0% 60.0%, #333 60.0% 100%)">
-                  <span>4.2</span>
-                </div>
-                <div class="score-text">
-                  <div class="score-label-big">⚠️ Afvent</div>
-                  <div class="score-max">ud af 7 point</div>
-                </div>
-              </div>
-              
-            <div class="score-row">
-              <div class="score-label"><span title="Bruger få penge på maskiner/bygninger">Lavt investeringsniveau (CapEx)</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Undgår risikable milliardopkøb">Ingen store fusioner</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:30.0%;background:#f44336"></div>
-              </div>
-              <div class="score-val">0.3</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="CEO siddet i ≥3 år">Stabil ledelse</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:40.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.4</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Holder sig til kerneforretningen">Fokuseret virksomhed</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:100.0%;background:#4caf50"></div>
-              </div>
-              <div class="score-val">1.0</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Udlodder ≥70% af overskud">Høj udlodning</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:40.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.4</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Top 2-3 i sin branche">Blandt de bedste</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:60.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.6</div>
-            </div>
-            <div class="score-row">
-              <div class="score-label"><span title="Modstandsdygtig over for kriser">Lav konjunkturrisiko</span></div>
-              <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:50.0%;background:#ff9800"></div>
-              </div>
-              <div class="score-val">0.5</div>
-            </div>
-              <p class="edit-hint">✏️ Rediger scores i <code>scores.json</code> i repoet</p>
-            </div>
-
-            <div class="section">
-              <h3>📈 Teknisk analyse</h3>
-              <div class="tech-box">
-                📈 **Kursen er i en opadgående tendens.** Aktien er steget 2.1% den seneste måned.
-✅ **Gyllent kors:** Kursen ligger over både 50-dages (893) og 200-dages (812) gennemsnittet. Det er et positivt signal — den langsigtede trend er opadgående.
-🟡 **RSI er 60 — neutral.** Hverken overkøbt eller oversolgt. Ingen ekstreme signaler lige nu.
-📈 Prisen er i den øverste fjerdedel af 52-ugers intervallet. Tæt på toppen.
-📌 **Støtte:** ca. 631 | **Modstand:** ca. 905
-              </div>
-              <div class="tech-details">
-                <span>50-dages SMA: 893.0</span>
-                <span>200-dages SMA: 812.0</span>
-                <span>RSI (14): 60.0</span>
-                <span>Støtte: 631.0</span>
-                <span>Modstand: 905.0</span>
-              </div>
-            </div>
-
-            <div class="section wide">
-              <h3>📰 Ugentlige nyheder</h3>
-              <ul class="news-list">
-                <li class="news-divider"><span>🇩🇰 Danske nyheder</span></li><li class="ritzau-item"><span class="ritzau-time">12:13</span> Genmab/Jyske: Konkurrentdata skaber tvivl om milliardopkøb - aktien dykker</li><li class="ritzau-item"><span class="ritzau-time">09:02</span> Vestas/Jyske: Har fået bedste start på andet kvartal siden 2019</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  <div class="add-stock">
-    <p>➕ <a href="https://github.com/henrikastrup1/aktieguld" target="_blank">Tilføj flere aktier</a> — rediger <code>aktieguld.py</code> i repoet</p>
-    <p style="margin-top:8px;font-size:.78rem;color:var(--ink3)">Rediger kvalitative scores i <code>scores.json</code></p>
+  <h1>🪙 Aktieguld <span>Centralen</span></h1>
+  <div class="sub" id="tagline"></div>
+  <div class="meta">
+    <span id="mWeek"></span> · <span id="mDate"></span>
   </div>
+  <div class="meta" id="mUpd"></div>
 </div>
+
+<div class="container">
+
+  <!-- Vault -->
+  <div class="vault" id="vaultGrid"></div>
+
+  <!-- Phases -->
+  <div class="phases" id="phases"></div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="filters">
+      <button data-filter data-filterval="all" aria-pressed="true">Alle</button>
+      <button data-filter data-filterval="buy" aria-pressed="false">🪙 Guldkorn</button>
+      <button data-filter data-filterval="wait" aria-pressed="false">⏳ Afvent</button>
+      <button data-filter data-filterval="avoid" aria-pressed="false">✋ Fravælg</button>
+    </div>
+    <button class="theme-btn" id="themeToggle">🌙 Mørk</button>
+  </div>
+
+  <div class="count-note" id="countNote"></div>
+  <div class="pending-wrap" id="pendingWrap"></div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th style="width:24px"></th>
+        <th class="sortable" data-sort="name">Navn<span class="arr"></span></th>
+        <th class="sortable" data-sort="name" style="font-weight:400">Kurs</th>
+        <th class="sortable hide-sm" data-sort="week">Uge<span class="arr"></span></th>
+        <th class="sortable hide-sm" data-sort="year">År<span class="arr"></span></th>
+        <th class="sortable hide-md" data-sort="pe">P/E<span class="arr"></span></th>
+        <th class="sortable" data-sort="score">Score<span class="arr"></span></th>
+        <th class="sortable" data-sort="ret">Afkast<span class="arr"></span></th>
+        <th style="width:90px">Vurdering</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  </div>
+
+  <!-- Add stock -->
+  <div class="add-stock">
+    <form class="add-form" id="addForm" autocomplete="off">
+      <input type="text" id="tickerInput" placeholder="Ticker f.eks. MAERSK-B.CO" spellcheck="false">
+      <button type="submit">Tilføj</button>
+    </form>
+    <p style="margin-top:6px;font-size:.78rem;color:var(--text-faint)">Tilføjede tickers gemmes lokalt og hentes ved næste søndagskørsel</p>
+  </div>
+
+</div>
+
 <div class="footer">
-  <p>Baseret på principper fra bogen "Aktieguld" • Data fra Yahoo Finance</p>
-  <p>Sidst opdateret: 02-06-2026 kl. 15:31 • Kører hver søndag</p>
+  <p>Baseret på principper fra bogen "Aktieguld" • Data fra Yahoo Finance, Ritzau Finans &amp; Børsen</p>
+  <p>Sidst opdateret: — • Kører hver søndag</p>
 </div>
+
+<script src="radar-data.js"></script>
+<script src="radar-app.js"></script>
 </body>
 </html>
