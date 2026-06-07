@@ -1,10 +1,10 @@
-/* Aktieguld Radar — genereret 02-06-2026 kl. 15:53 */
+/* Aktieguld Radar — genereret 07-06-2026 kl. 08:00 */
 window.AKTIEGULD = {
   "meta": {
     "title": "Aktieguld Centralen",
     "week": "Uge 23",
-    "dateLong": "2. juni 2026",
-    "updated": "02-06-2026 kl. 15:53",
+    "dateLong": "7. juni 2026",
+    "updated": "07-06-2026 kl. 08:00",
     "cadence": "Kører hver søndag",
     "tagline": "Et glimt af guld i støjen — systematisk, tålmodig, kedeligt på den gode måde."
   },
@@ -34,17 +34,17 @@ window.AKTIEGULD = {
     {
       "name": "Novo Nordisk",
       "ticker": "NOVO-B.CO",
-      "price": "277.65",
+      "price": "283.85",
       "currency": "DKK",
-      "weekPct": -3.4,
-      "yearPct": -38.8,
+      "weekPct": -3.3,
+      "yearPct": -37.7,
       "metrics": {
-        "pe": "10.1",
+        "pe": "10.4",
         "peVerdict": {
           "kind": "good",
           "text": "Fair pris (P/E under 15)"
         },
-        "marketCap": "1.2 bio.",
+        "marketCap": "1.3 bio.",
         "eps": "27.42",
         "payout": "42.7%",
         "revGrowth": "24.0%",
@@ -54,7 +54,7 @@ window.AKTIEGULD = {
         "beta": "0.35",
         "low52": "224",
         "high52": "533",
-        "rangePct": 17.0
+        "rangePct": 19.0
       },
       "expected": {
         "growth": 67.1,
@@ -101,81 +101,85 @@ window.AKTIEGULD = {
       },
       "technical": {
         "trend": "down",
-        "trendText": "Kursen er i en nedadgående tendens. Aktien er faldet 0.1% den seneste måned.",
+        "trendText": "Kursen er i en nedadgående tendens. Aktien er faldet 0.7% den seneste måned.",
         "cross": null,
-        "smaText": "Kursen (278) ligger over 50-dages SMA (262). Positivt kortsigtet signal.",
-        "rsi": 40,
-        "rsiText": "RSI er 40 — neutral. Ingen ekstreme signaler.",
+        "smaText": "Kursen (284) ligger over 50-dages SMA (263). Positivt kortsigtet signal.",
+        "rsi": 41,
+        "rsiText": "RSI er 41 — neutral. Ingen ekstreme signaler.",
         "rangeText": "Prisen er i den nederste fjerdedel af 52-ugers intervallet. Tæt på bunden.",
-        "sma50": "262",
-        "sma200": "306",
+        "sma50": "263",
+        "sma200": "305",
         "support": "235",
         "resistance": "472"
       },
       "news": {
-        "source": "Yahoo Finance (10), Ritzau (2), Børsen (1)",
+        "source": "Yahoo Finance (10), Ritzau (3), Børsen (1)",
         "items": [
           {
-            "time": "02-06",
-            "text": "Viking Therapeutics' Q3 Catalyst That Could Turn Eli Lilly's and Novo Nordisk's Daily Weight Loss Pill Strategy Upside Down",
-            "url": "https://finance.yahoo.com/sectors/healthcare/articles/viking-therapeutics-q3-catalyst-could-150800770.html"
+            "time": "06-06",
+            "text": "Novo Nordisk Eyes Next GLP 1 Wave With Amycretin Trial Results",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/novo-nordisk-eyes-next-glp-151204776.html"
           },
           {
-            "time": "02-06",
-            "text": "Is Novo Nordisk A/S (NVO) Expanding Its Lead in Diabetes and Weight Loss Ahead of ADA Conference?",
-            "url": "https://finance.yahoo.com/sectors/healthcare/articles/novo-nordisk-nvo-expanding-lead-141027884.html"
+            "time": "06-06",
+            "text": "Pfizer targets obesity market with monthly weight-loss injection data",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/pfizer-targets-obesity-market-monthly-140426123.html"
           },
           {
-            "time": "02-06",
-            "text": "Pfizer's Obesity and Oncology Pipeline Sets Up a Catalyst-Rich 2026",
-            "url": "https://finance.yahoo.com/sectors/healthcare/articles/pfizers-obesity-oncology-pipeline-sets-130800477.html"
+            "time": "06-06",
+            "text": "Novo's Wegovy Pill Isn't Just Beating Expectations -- It's Obliterating Them. Is the Beaten-Down Stock a Buy Now?",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/novos-wegovy-pill-isnt-just-133500213.html"
           },
           {
-            "time": "01-06",
-            "text": "Is Eli Lilly Starting an Nvidia-Style Run?",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/eli-lilly-starting-nvidia-style-102500703.html"
+            "time": "05-06",
+            "text": "Novo And Lilly Push Beyond US As Only 1%-2% Use Obesity Drugs Globally",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/novo-lilly-push-beyond-us-183108101.html"
           },
           {
-            "time": "31-05",
-            "text": "5 Best Growth Stocks for the Next 10 Years",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/5-best-growth-stocks-next-114500183.html"
+            "time": "05-06",
+            "text": "GLP-1 Sales Forecast Jumps To $150 Billion By 2030",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/glp-1-sales-forecast-jumps-171933527.html"
           },
           {
-            "time": "30-05",
-            "text": "Lilly's New Drug Just Delivered the Largest Weight Loss Ever Seen in a Clinical Trial -- Here's What It Means for Investors",
-            "url": "https://finance.yahoo.com/sectors/healthcare/articles/lillys-drug-just-delivered-largest-123500453.html"
+            "time": "05-06",
+            "text": "Jim Cramer Details How Eli Lilly Could Defeat Competitors",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/jim-cramer-details-eli-lilly-141421988.html"
           },
           {
-            "time": "30-05",
-            "text": "CVS Decision Tests Novo Nordisk Wegovy Edge And Valuation Story",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/cvs-decision-tests-novo-nordisk-110621754.html"
+            "time": "05-06",
+            "text": "Can Eli Lilly's 2026 Acquisition Spree Diversify Growth Beyond GLP-1s?",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/eli-lillys-2026-acquisition-spree-133400166.html"
           },
           {
-            "time": "30-05",
-            "text": "Stock Split Watch: Is Eli Lilly Next?",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/stock-split-watch-eli-lilly-081000229.html"
+            "time": "05-06",
+            "text": "Novo Nordisk A/S (NVO) Is a Trending Stock: Facts to Know Before Betting on It",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/novo-nordisk-nvo-trending-stock-130004385.html"
           },
           {
-            "time": "29-05",
-            "text": "Eli Lilly (LLY): Top Healthcare Stock Pick of Claude AI",
-            "url": "https://finance.yahoo.com/sectors/healthcare/articles/eli-lilly-lly-top-healthcare-200844274.html"
+            "time": "05-06",
+            "text": "LLY Rises 14% in a Month: Should You Hold as Obesity Growth Continues?",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/lly-rises-14-month-hold-125600959.html"
           },
           {
-            "time": "29-05",
-            "text": "LLY Stock Gains 4% to All-Time High: Is Obesity Access the Catalyst?",
-            "url": "https://finance.yahoo.com/sectors/healthcare/articles/lly-stock-gains-4-time-144900164.html"
+            "time": "05-06",
+            "text": "TD Cowen Raises GLP-1 Sales Forecast To $150B By 2030 – Industry Leaders LLY, NVO To Remain Dominant",
+            "url": "https://finance.yahoo.com/sectors/healthcare/articles/td-cowen-raises-glp-1-125347045.html"
           },
           {
-            "time": "08:56",
-            "text": "Novonesis får udvidet godkendelse for foderenzym i EU"
+            "time": "15:11",
+            "text": "Novo Nordisk er efter større investering klar til fabriksåbning i Tjekkiet"
           },
           {
-            "time": "08:54",
-            "text": "Novonesis kan få medvind fra Mellemøsten mener Citi - NY"
+            "time": "13:35",
+            "text": "Novo/Jyske: Konkurrentdata og næste bølge af midler kommer under lup på konference"
           },
           {
-            "time": "Tue, 02 Jun",
-            "text": "Novos vægttabsmidler topper liste over bivirkninger"
+            "time": "17:06",
+            "text": "Onsdagens aktier: DSV og Novo tyngede i rødt C25 og smæk til entreprenøraktie"
+          },
+          {
+            "time": "Fri, 05 Jun",
+            "text": "Dyk i recepter for Novo Nordisk-pille i USA"
           }
         ]
       },
@@ -390,34 +394,34 @@ window.AKTIEGULD = {
         },
         {
           "d": "2026-06-07",
-          "p": 277.65
+          "p": 283.85
         }
       ]
     },
     {
       "name": "Coca-Cola",
       "ticker": "KO",
-      "price": "78.31",
+      "price": "79.48",
       "currency": "USD",
-      "weekPct": -2.7,
-      "yearPct": 11.9,
+      "weekPct": 0.6,
+      "yearPct": 14.6,
       "metrics": {
-        "pe": "24.6",
+        "pe": "25.0",
         "peVerdict": {
           "kind": "warn",
           "text": "Dyr (P/E over 20 — kræver høj vækst)"
         },
-        "marketCap": "336.9 mia.",
+        "marketCap": "342.0 mia.",
         "eps": "3.18",
         "payout": "64.8%",
         "revGrowth": "12.1%",
         "margin": "27.8%",
         "roe": "43.4%",
         "debtEquity": "124.9",
-        "beta": "0.36",
+        "beta": "0.35",
         "low52": "65",
         "high52": "83",
-        "rangePct": 75.0
+        "rangePct": 82.0
       },
       "expected": {
         "growth": 18.2,
@@ -463,15 +467,15 @@ window.AKTIEGULD = {
         ]
       },
       "technical": {
-        "trend": "down",
-        "trendText": "Kursen er i en nedadgående tendens. Aktien er faldet 0.2% den seneste måned.",
-        "cross": "Gyldent kors: Kursen ligger over både 50-dages (78) og 200-dages (72) gennemsnittet. Den langsigtede trend er opadgående.",
+        "trend": "up",
+        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 1.4% den seneste måned.",
+        "cross": "Gyldent kors: Kursen ligger over både 50-dages (78) og 200-dages (73) gennemsnittet. Den langsigtede trend er opadgående.",
         "smaText": null,
-        "rsi": 40,
-        "rsiText": "RSI er 40 — neutral. Ingen ekstreme signaler.",
+        "rsi": 45,
+        "rsiText": "RSI er 45 — neutral. Ingen ekstreme signaler.",
         "rangeText": "Prisen er i den øverste fjerdedel af 52-ugers intervallet. Tæt på toppen.",
         "sma50": "78",
-        "sma200": "72",
+        "sma200": "73",
         "support": "68",
         "resistance": "78"
       },
@@ -479,54 +483,54 @@ window.AKTIEGULD = {
         "source": "Yahoo Finance (10)",
         "items": [
           {
-            "time": "02-06",
-            "text": "The Coca-Cola Company readies listing of India bottler",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-company-readies-listing-135139209.html"
+            "time": "07-06",
+            "text": "Here's How Many Shares of Coca-Cola You'd Need for $10,000 in Yearly Dividends",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/heres-many-shares-coca-cola-063500673.html"
           },
           {
-            "time": "02-06",
-            "text": "Inside Coca-Cola’s use of AI to sharpen marketing spend",
-            "url": "https://finance.yahoo.com/sectors/technology/articles/inside-coca-cola-ai-sharpen-070000984.html"
+            "time": "06-06",
+            "text": "Big Money Powers the Biggest Sporting Event Ever",
+            "url": "https://www.barrons.com/articles/fifa-world-cup-sponsors-visa-mcdonalds-bank-of-america-coca-cola-77731ad1?siteid=yhoof2&yptr=yahoo"
           },
           {
-            "time": "02-06",
-            "text": "Coca-Cola India Bottler Listing Plan And What It Means For KO Investors",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-india-bottler-listing-021121512.html"
+            "time": "06-06",
+            "text": "The Coca-Cola (KO) Explores Potential Listing in India of Hindustan Coca-Cola Holdings Pvt. Ltd.",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-explores-potential-172531894.html"
           },
           {
-            "time": "01-06",
-            "text": "Can Brand Restaging Meaningfully Lift PepsiCo's Organic Sales Outlook?",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/brand-restaging-meaningfully-lift-pepsicos-170200953.html"
+            "time": "06-06",
+            "text": "SCHD’s $85 Billion Strategy Now Concentrates 41 Percent of Your Money in Just Ten Stocks",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/schd-85-billion-strategy-now-161145498.html"
           },
           {
-            "time": "01-06",
-            "text": "Coca Cola Stock Will Hit a New All-Time High On This Date",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-stock-hit-time-153800175.html"
+            "time": "06-06",
+            "text": "These Investors Earned 20% to 33% Returns Using The Same Philosophy on Completely Different Stocks",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/investors-earned-20-33-returns-134215850.html"
           },
           {
-            "time": "01-06",
-            "text": "Walmart’s Pullback Has Created a Compelling Technical Setup",
-            "url": "https://www.barrons.com/articles/walmart-stock-earnings-pullback-opportunity-60af1f24?siteid=yhoof2&yptr=yahoo"
+            "time": "06-06",
+            "text": "How The Coca-Cola (KO) Investment Narrative Is Evolving Without A Change In Fair Value",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-investment-narrative-021150955.html"
           },
           {
-            "time": "01-06",
-            "text": "Is Coca-Cola (KO) the Safest Dividend Stock To Buy?",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-safest-dividend-134336594.html"
+            "time": "05-06",
+            "text": "Why Coca-Cola and Walmart Top This List of Steady, Low-Volatility Dividend Aristocrats",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-coca-cola-walmart-top-230002965.html"
           },
           {
-            "time": "01-06",
-            "text": "Is Coca-Cola (KO) a Buy as Wall Street Analysts Look Optimistic?",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-ko-buy-wall-133003766.html"
+            "time": "05-06",
+            "text": "Traders Ran for Cover (and Kleenex)",
+            "url": "https://www.wsj.com/livecoverage/may-jobs-report-stock-market-06-05-2026/card/traders-ran-for-cover-and-kleenex--dKGxFfqGnF6p7AttaYa8?siteid=yhoof2&yptr=yahoo"
           },
           {
-            "time": "01-06",
-            "text": "Coca-Cola's Dividend Strength: Still a Reliable Income Play?",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/coca-colas-dividend-strength-still-123000793.html"
+            "time": "05-06",
+            "text": "Top Research Reports for Caterpillar, Coca-Cola & HSBC",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-caterpillar-coca-202700612.html"
           },
           {
-            "time": "01-06",
-            "text": "No Rate Cuts Until 2027? Grab These High-Yielding Safe Dividend Kings Now",
-            "url": "https://finance.yahoo.com/economy/policy/articles/no-rate-cuts-until-2027-122004167.html"
+            "time": "05-06",
+            "text": "Why Coca-Cola Stock Climbed Today",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-coca-cola-stock-climbed-201502214.html"
           }
         ]
       },
@@ -741,39 +745,39 @@ window.AKTIEGULD = {
         },
         {
           "d": "2026-06-07",
-          "p": 78.31
+          "p": 79.48
         }
       ]
     },
     {
       "name": "DSV",
       "ticker": "DSV.CO",
-      "price": "1,629.00",
+      "price": "1,611.50",
       "currency": "DKK",
-      "weekPct": 4.0,
-      "yearPct": 6.8,
+      "weekPct": 2.2,
+      "yearPct": 3.6,
       "metrics": {
-        "pe": "45.8",
+        "pe": "45.5",
         "peVerdict": {
           "kind": "warn",
           "text": "Dyr (P/E over 20 — kræver høj vækst)"
         },
-        "marketCap": "388.6 mia.",
-        "eps": "35.58",
+        "marketCap": "384.4 mia.",
+        "eps": "35.45",
         "payout": "19.7%",
         "revGrowth": "68.9%",
         "margin": "2.5%",
         "roe": "6.2%",
         "debtEquity": "77.2",
-        "beta": "0.98",
+        "beta": "0.97",
         "low52": "1,233",
         "high52": "1,914",
-        "rangePct": 58.0
+        "rangePct": 56.0
       },
       "expected": {
         "growth": 68.9,
-        "dividend": 44.0,
-        "total": 112.9,
+        "dividend": 43.0,
+        "total": 111.9,
         "note": {
           "kind": "warn",
           "text": "Dyr (P/E over 20 — kræver høj vækst)"
@@ -815,19 +819,19 @@ window.AKTIEGULD = {
       },
       "technical": {
         "trend": "up",
-        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 3.7% den seneste måned.",
-        "cross": "Gyldent kors: Kursen ligger over både 50-dages (1587) og 200-dages (1528) gennemsnittet. Den langsigtede trend er opadgående.",
+        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 10.8% den seneste måned.",
+        "cross": "Gyldent kors: Kursen ligger over både 50-dages (1586) og 200-dages (1529) gennemsnittet. Den langsigtede trend er opadgående.",
         "smaText": null,
-        "rsi": 65,
-        "rsiText": "RSI er 65 — neutral. Ingen ekstreme signaler.",
-        "rangeText": "Prisen er midt i 52-ugers intervallet (58% fra bunden).",
-        "sma50": "1,587",
-        "sma200": "1,528",
+        "rsi": 50,
+        "rsiText": "RSI er 50 — neutral. Ingen ekstreme signaler.",
+        "rangeText": "Prisen er midt i 52-ugers intervallet (56% fra bunden).",
+        "sma50": "1,586",
+        "sma200": "1,529",
         "support": "1,322",
         "resistance": "1,799"
       },
       "news": {
-        "source": "Yahoo Finance (10)",
+        "source": "Yahoo Finance (10), Ritzau (2)",
         "items": [
           {
             "time": "30-04",
@@ -878,6 +882,14 @@ window.AKTIEGULD = {
             "time": "14-01",
             "text": "This is the \"only stock to own\" in European logistics, Bernstein says",
             "url": "https://finance.yahoo.com/news/only-stock-own-european-logistics-104221926.html"
+          },
+          {
+            "time": "07:48",
+            "text": "DSV/Nordea: Kursmålet løftes til 2125 kr. fra 2050 kr."
+          },
+          {
+            "time": "17:06",
+            "text": "Onsdagens aktier: DSV og Novo tyngede i rødt C25 og smæk til entreprenøraktie"
           }
         ]
       },
@@ -1092,25 +1104,25 @@ window.AKTIEGULD = {
         },
         {
           "d": "2026-06-07",
-          "p": 1629.0
+          "p": 1611.5
         }
       ]
     },
     {
       "name": "Jyske Bank",
       "ticker": "JYSK.CO",
-      "price": "903.00",
+      "price": "887.50",
       "currency": "DKK",
-      "weekPct": -1.5,
-      "yearPct": 47.2,
+      "weekPct": -2.4,
+      "yearPct": 45.8,
       "metrics": {
-        "pe": "10.9",
+        "pe": "10.7",
         "peVerdict": {
           "kind": "good",
           "text": "Fair pris (P/E under 15)"
         },
-        "marketCap": "51.6 mia.",
-        "eps": "83.08",
+        "marketCap": "50.7 mia.",
+        "eps": "83.07",
         "payout": "30.1%",
         "revGrowth": "-8.1%",
         "margin": "36.8%",
@@ -1119,7 +1131,7 @@ window.AKTIEGULD = {
         "beta": "0.35",
         "low52": "618",
         "high52": "981",
-        "rangePct": 79.0
+        "rangePct": 74.0
       },
       "expected": {
         "growth": -8.1,
@@ -1166,14 +1178,14 @@ window.AKTIEGULD = {
       },
       "technical": {
         "trend": "up",
-        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 2.1% den seneste måned.",
-        "cross": "Gyldent kors: Kursen ligger over både 50-dages (893) og 200-dages (812) gennemsnittet. Den langsigtede trend er opadgående.",
-        "smaText": null,
-        "rsi": 60,
-        "rsiText": "RSI er 60 — neutral. Ingen ekstreme signaler.",
+        "trendText": "Kursen er i en opadgående tendens. Aktien er steget 0.6% den seneste måned.",
+        "cross": null,
+        "smaText": "Kursen er under 50-dages gennemsnittet (894) men over 200-dages (814).",
+        "rsi": 48,
+        "rsiText": "RSI er 48 — neutral. Ingen ekstreme signaler.",
         "rangeText": "Prisen er i den øverste fjerdedel af 52-ugers intervallet. Tæt på toppen.",
-        "sma50": "893",
-        "sma200": "812",
+        "sma50": "894",
+        "sma200": "814",
         "support": "631",
         "resistance": "905"
       },
@@ -1231,12 +1243,12 @@ window.AKTIEGULD = {
             "url": "https://finance.yahoo.com/news/does-jyske-banks-ongoing-dkk-160841356.html"
           },
           {
-            "time": "12:13",
-            "text": "Genmab/Jyske: Konkurrentdata skaber tvivl om milliardopkøb - aktien dykker"
+            "time": "13:35",
+            "text": "Novo/Jyske: Konkurrentdata og næste bølge af midler kommer under lup på konference"
           },
           {
-            "time": "09:02",
-            "text": "Vestas/Jyske: Har fået bedste start på andet kvartal siden 2019"
+            "time": "07:56",
+            "text": "Jyske Bank om kongetal: Det kan rykke på renteforventningerne"
           }
         ]
       },
@@ -1451,7 +1463,7 @@ window.AKTIEGULD = {
         },
         {
           "d": "2026-06-07",
-          "p": 903.0
+          "p": 887.5
         }
       ]
     }
