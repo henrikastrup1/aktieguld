@@ -1,0 +1,21 @@
+{
+  "month": "2026-06",
+  "posts": [
+    {
+      "date": "2026-06-10",
+      "weekday": "onsdag",
+      "title": "Velkommen til Aktieguld 2.0",
+      "system": true,
+      "sections": [
+        {
+          "heading": "Om denne side",
+          "body": "Dette er det første indlæg i nyhedssektionen — og det eneste, der ikke handler om markedet. Fra i morgen skriver Oscar hver morgen kl. 06:45 et nyt indlæg med tre faste sektioner: **det danske marked**, **det amerikanske marked** og **futures** for dagens kommende handel.\n\nIndlæggene gemmes som JSON-filer direkte i GitHub-repoet — én fil pr. måned. Intet er bundet til browseren, og alt kan læses og søges i for evigt."
+        },
+        {
+          "heading": "Sådan bruger du siden",
+          "body": "- **Arkivpanelet:** vælg måned og dato for at hoppe til et bestemt indlæg\n- **Søgefeltet:** søger på tværs af alle måneder og indlæg\n- **Månedsskifte:** sker automatisk — Oscar opretter selv en ny fil den 1. i måneden\n- **Analyser-fanen:** hver søndag gemmes en teknisk analyse af alle aktier med KØB/SÆLG/BEHOLD-signal, så du altid kan gå tilbage og se, hvad systemet sagde på et givent tidspunkt"
+        }
+      ]
+    }
+  ]
+}
