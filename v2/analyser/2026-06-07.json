@@ -1,0 +1,103 @@
+{
+  "date": "2026-06-07",
+  "source": "Genereret ud fra de tekniske data i Aktieguld Radar-kørslen 07-06-2026 kl. 08:00",
+  "method": "Signalregler: KØB = kurs over både SMA50 og SMA200, RSI 35-70, samt gyldent kors eller brud over modstand. SÆLG = kurs under både SMA50 og SMA200 med RSI over 30, eller dødskors i faldende trend. BEHOLD = alt andet.",
+  "stocks": [
+    {
+      "name": "Novo Nordisk",
+      "ticker": "NOVO-B.CO",
+      "price": "283.85",
+      "currency": "DKK",
+      "signal": "behold",
+      "headline": "Kortsigtet stabilisering, men den langsigtede trend er stadig negativ",
+      "indicators": {
+        "rsi": 41,
+        "sma50": "263",
+        "sma200": "305",
+        "support": "235",
+        "resistance": "472",
+        "trend": "ned",
+        "range52w": "Nederste fjerdedel af 52-ugers intervallet"
+      },
+      "arguments": [
+        "Kursen (284) ligger over 50-dages gennemsnittet (263) — et positivt kortsigtet signal om at faldet er bremset.",
+        "Men kursen ligger fortsat under 200-dages gennemsnittet (305), så den langsigtede trend er ikke vendt endnu.",
+        "RSI på 41 er neutral — hverken oversolgt eller overkøbt, ingen ekstreme signaler.",
+        "Kursen handler i den nederste fjerdedel af 52-ugers intervallet (224-533) med støtte ved 235, som indtil videre har holdt."
+      ],
+      "conclusion": "BEHOLD. Aktien viser tidlige tegn på bundformation over SMA50, men køsignalet kræver at kursen genvinder SMA200 ved 305. Radarens kvalitetsscore er 4,1 (Afvent)."
+    },
+    {
+      "name": "Coca-Cola",
+      "ticker": "KO",
+      "price": "79.48",
+      "currency": "USD",
+      "signal": "koeb",
+      "headline": "Gyldent kors og brud over modstanden ved 78",
+      "indicators": {
+        "rsi": 45,
+        "sma50": "78",
+        "sma200": "73",
+        "support": "68",
+        "resistance": "78",
+        "trend": "op",
+        "range52w": "Øverste fjerdedel af 52-ugers intervallet"
+      },
+      "arguments": [
+        "Gyldent kors: kursen (79,48) ligger over både 50-dages (78) og 200-dages gennemsnittet (73) — den langsigtede trend er opadgående.",
+        "Kursen har netop brudt over modstandsniveauet ved 78, hvilket teknisk åbner for videre stigning.",
+        "RSI på 45 er neutral — aktien er ikke overkøbt på trods af stigningen, så der er plads opad.",
+        "Opadgående trend bekræftet: +1,4% den seneste måned i et roligt, stabilt forløb."
+      ],
+      "conclusion": "KØB. Teknikken og radarens kvalitetsscore peger samme vej — scoren på 5,9 er ugens højeste og radarens eneste Guldkorn. Bruddet over 78 bør dog bekræftes ved at niveauet holder som ny støtte."
+    },
+    {
+      "name": "DSV",
+      "ticker": "DSV.CO",
+      "price": "1611.50",
+      "currency": "DKK",
+      "signal": "koeb",
+      "headline": "Stærk teknik med gyldent kors — men kvalitetsscoren maner til besindighed",
+      "indicators": {
+        "rsi": 50,
+        "sma50": "1.586",
+        "sma200": "1.529",
+        "support": "1.322",
+        "resistance": "1.799",
+        "trend": "op",
+        "range52w": "Midt i 52-ugers intervallet (56% fra bunden)"
+      },
+      "arguments": [
+        "Gyldent kors: kursen (1.612) ligger over både 50-dages (1.586) og 200-dages gennemsnittet (1.529).",
+        "Stærkt momentum: +10,8% den seneste måned — den kraftigste bevægelse blandt de fire aktier.",
+        "RSI på 50 er bemærkelsesværdigt neutral efter så stor en stigning — ingen tegn på overophedning.",
+        "Der er fortsat luft op til modstanden ved 1.799 (ca. 12% over aktuel kurs)."
+      ],
+      "conclusion": "KØB rent teknisk — alle signalregler er opfyldt. Bemærk dog at radarens kvalitetsscore kun er 4,3 (Afvent), så Aktieguld-metodens samlede dom er mere forsigtig end teknikken alene. Det tekniske signal og kvalitetsvurderingen skal læses sammen."
+    },
+    {
+      "name": "Jyske Bank",
+      "ticker": "JYSK.CO",
+      "price": "887.50",
+      "currency": "DKK",
+      "signal": "behold",
+      "headline": "Klemt mellem 50-dages gennemsnittet og modstanden ved 905",
+      "indicators": {
+        "rsi": 48,
+        "sma50": "894",
+        "sma200": "814",
+        "support": "631",
+        "resistance": "905",
+        "trend": "op",
+        "range52w": "Øverste fjerdedel af 52-ugers intervallet"
+      },
+      "arguments": [
+        "Kursen (888) ligger lige under 50-dages gennemsnittet (894) — det korte momentum er gået i stå.",
+        "Den langsigtede trend er fortsat intakt: kursen ligger klart over 200-dages gennemsnittet (814).",
+        "RSI på 48 er neutral, og aktien handler tæt på toppen af sit 52-ugers interval.",
+        "Modstanden ved 905 ligger kun ca. 2% over kursen — der skal et brud til, før der er nyt teknisk signal."
+      ],
+      "conclusion": "BEHOLD. Aktien konsoliderer i et smalt bånd mellem SMA50 og modstanden ved 905. Et brud over 905 ville være et købssignal; et fald under SMA200 ville svække billedet. Radarens kvalitetsscore er 4,2 (Afvent)."
+    }
+  ]
+}
